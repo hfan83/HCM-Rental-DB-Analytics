@@ -32,8 +32,7 @@ It focuses on building a robust solution for the rental room market in Ho Chi Mi
 - Convert date strings to proper `DATE` type.
 - Remove unnecessary columns.
 - Builds normalized relational tables: `Room`, `District`, `Amenities_Type`, `Amenities_Details`, `Room_Amenities`.
-- RDM:
-- ![RDM](https://github.com/user-attachments/assets/616c9bd8-a441-4cd4-9707-d8e3ab9b80fe)
+![RDM](https://github.com/user-attachments/assets/616c9bd8-a441-4cd4-9707-d8e3ab9b80fe)
 
 3️⃣ `03_Backup_and_Job_Scheduling.sql`  
 - Creates stored procedures for **Full & Differential backups**, plus automatic cleanup of old backup files (30 days full, 2 days diff).
@@ -55,7 +54,7 @@ It focuses on building a robust solution for the rental room market in Ho Chi Mi
        -Distribution of area vs price
        -Top listed amenities
        -Dashboard Preview:
-           ![Dashboard_image](https://github.com/user-attachments/assets/fb5cef2a-1200-4994-92a3-265008956c98)
+![Dashboard_image](https://github.com/user-attachments/assets/fb5cef2a-1200-4994-92a3-265008956c98)
 
 6️⃣ `06_Prediction_Modeling/`  
 - Python notebooks to read clean data from Azure, engineer features, and train models (Linear Regression, Random Forest, XGBoost, LightGBM).
