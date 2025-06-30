@@ -50,10 +50,10 @@ It focuses on building a robust solution for the rental room market in Ho Chi Mi
 5️⃣ `05_Overview_Dashboard.pbix`  
 - Power BI dashboard connected directly to the Azure SQL Database.
 - Shows key visuals:
-       -Average rental prices by district
-       -Distribution of area vs price
-       -Top listed amenities
-       -Dashboard Preview:
+  Average rental prices by district
+  Distribution of area vs price
+  Top listed amenities
+  Dashhboard Preview:
 ![Dashboard_image](https://github.com/user-attachments/assets/fb5cef2a-1200-4994-92a3-265008956c98)
 
 6️⃣ `06_Prediction_Modeling/`  
