@@ -22,43 +22,45 @@ It focuses on building a robust solution for the rental room market in Ho Chi Mi
 ## 📂 Project Structure (ordered execution flow)
 
 1️⃣ `01_Scraping_and_Importing_to_Cloud/`  
- - Python scripts to scrape `phongtro123.com` using BeautifulSoup & requests.  
- - Extracts rental details (price, area, address, dates, amenities).  
- - Loads raw data into Azure SQL using `pyodbc`.
+- Python scripts to scrape `phongtro123.com` using BeautifulSoup & requests.
+- Extracts rental details (price, area, address, dates, amenities).
+- Loads raw data into Azure SQL using `pyodbc`.
 
 2️⃣ `02_Clean_Transform_and_Model.sql`  
 - T-SQL scripts to clean, normalize data:
        -Standardize `price` & `area` units.
-       - Extract `district` from unstructured addresses.
-     - Convert date strings to proper `DATE` type.
-     - Remove unnecessary columns.
- - Builds normalized relational tables: `Room`, `District`, `Amenities_Type`, `Amenities_Details`, `Room_Amenities`.
+       -Extract `district` from unstructured addresss
+       -Convert date strings to proper `DATE` type.
+       -Remove unnecessary columns.
+- Builds normalized relational tables: `Room`, `District`, `Amenities_Type`, `Amenities_Details`, `Room_Amenities`.
+- RDM: ![RDM](https://github.com/user-attachments/assets/616c9bd8-a441-4cd4-9707-d8e3ab9b80fe)
 
 3️⃣ `03_Backup_and_Job_Scheduling.sql`  
- - Creates stored procedures for **Full & Differential backups**, plus automatic cleanup of old backup files (30 days full, 2 days diff).  
- - Sets up scheduled jobs via SQL Server Agent for daily full backups, bi-daily differential backups, and daily cleanup.  
- - Adds `fn_JobHistory` function to view execution logs.
+- Creates stored procedures for **Full & Differential backups**, plus automatic cleanup of old backup files (30 days full, 2 days diff).
+- Sets up scheduled jobs via SQL Server Agent for daily full backups, bi-daily differential backups, and daily cleanup.
+- Adds `fn_JobHistory` function to view execution logs.
 
 4️⃣ `04_User_Roles_and_Permissions.sql`  
- - Creates `Admin`, `Data Engineer (DE)`, `Data Analyst (DA)` users.  
- - Grants granular permissions:
-    - `Admin`: full database control
-    - `DE`: CRUD + create procedures/functions
-    - `DA`: read-only SELECT
- - Includes dynamic procedures to revoke permissions and audit role rights.
+- Creates `Admin`, `Data Engineer (DE)`, `Data Analyst (DA)` users.
+- Grants granular permissions:
+       -`Admin`: full database control
+       -`DE`: CRUD + create procedures/functions
+       -`DA`: read-only SELECT
+- Includes dynamic procedures to revoke permissions and audit role rights.
 
 5️⃣ `05_Overview_Dashboard.pbix`  
- - Power BI dashboard connected directly to the Azure SQL Database.  
- - Shows key visuals:
-    - Average rental prices by district
-    - Distribution of area vs price
-    - Top listed amenities
-    ![Dashboard_image](https://github.com/user-attachments/assets/fb5cef2a-1200-4994-92a3-265008956c98)
+- Power BI dashboard connected directly to the Azure SQL Database.
+- Shows key visuals:
+       -Average rental prices by district
+       -Distribution of area vs price
+       -Top listed amenities
+       -Dashboard Preview:
+           ![Dashboard_image](https://github.com/user-attachments/assets/fb5cef2a-1200-4994-92a3-265008956c98)
 
 6️⃣ `06_Prediction_Modeling/`  
- - Python notebooks to read clean data from Azure, engineer features, and train models (Linear Regression, Random Forest, XGBoost, LightGBM).  
- - Selects **Random Forest** (≈38% R²) as best performer given limited features.  
- - Deploys with Streamlit so users can input room attributes and predict price.
+- Python notebooks to read clean data from Azure, engineer features, and train models (Linear Regression, Random Forest, XGBoost, LightGBM).
+- Selects **Random Forest** (≈38% R²) as best performer given limited features.
+- Deploys with Streamlit so users can input room attributes and predict price.
 
 ---
 
