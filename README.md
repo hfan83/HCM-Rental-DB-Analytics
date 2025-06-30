@@ -32,6 +32,7 @@ It focuses on building a robust solution for the rental room market in Ho Chi Mi
        -Extract `district` from unstructured addresss
        -Convert date strings to proper `DATE` type.
        -Remove unnecessary columns.
+  
 - Builds normalized relational tables: `Room`, `District`, `Amenities_Type`, `Amenities_Details`, `Room_Amenities`.
 - RDM: ![RDM](https://github.com/user-attachments/assets/616c9bd8-a441-4cd4-9707-d8e3ab9b80fe)
 
