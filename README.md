@@ -22,7 +22,7 @@ It focuses on building a robust solution for the rental room market in Ho Chi Mi
 ## 📂 Project Structure (ordered execution flow)
 
 1️⃣ `01_Scraping_and_Importing_to_Cloud/`  
- - Python scripts to scrape `phongtro123.com` using BeautifulSoup & requests.  
+- Python scripts to scrape `phongtro123.com` using BeautifulSoup & requests.  
  - Extracts rental details (price, area, address, dates, amenities).  
  - Loads raw data into Azure SQL using `pyodbc`.
 
@@ -34,6 +34,7 @@ It focuses on building a robust solution for the rental room market in Ho Chi Mi
     - Remove unnecessary columns.
     - Builds normalized relational tables: `Room`, `District`, `Amenities_Type`, `Amenities_Details`, `Room_Amenities`.  
     - Relational Data Model:
+       
         ![alt text](image/RDM.png)
 
 3️⃣ `03_Backup_and_Job_Scheduling.sql`  
