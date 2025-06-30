@@ -27,11 +27,13 @@ It focuses on building a robust solution for the rental room market in Ho Chi Mi
 - Loads raw data into Azure SQL using `pyodbc`.
 
 2️⃣ `02_Clean_Transform_and_Model.sql`  
-- Standardize `price` & `area` units.
-- Extract `district` from unstructured addresss
-- Convert date strings to proper `DATE` type.
-- Remove unnecessary columns.
-- Builds normalized relational tables: `Room`, `District`, `Amenities_Type`, `Amenities_Details`, `Room_Amenities`.
+- T-SQL scripts to clean, normalize data:
+  - Standardize `price` & `area` units.
+  - Extract `district` from unstructured addresss
+  - Convert date strings to proper `DATE` type
+  - Remove unnecessary columns
+  - Builds normalized relational tables: `Room`, `District`, `Amenities_Type`, `Amenities_Details`, `Room_Amenities`
+  - RDM: 
 ![RDM](https://github.com/user-attachments/assets/616c9bd8-a441-4cd4-9707-d8e3ab9b80fe)
 
 3️⃣ `03_Backup_and_Job_Scheduling.sql`  
