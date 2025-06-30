@@ -33,7 +33,7 @@ It focuses on building a robust solution for the rental room market in Ho Chi Mi
 - Remove unnecessary columns.
 - Builds normalized relational tables: `Room`, `District`, `Amenities_Type`, `Amenities_Details`, `Room_Amenities`.
 - RDM:
-  ![RDM](https://github.com/user-attachments/assets/616c9bd8-a441-4cd4-9707-d8e3ab9b80fe)
+- ![RDM](https://github.com/user-attachments/assets/616c9bd8-a441-4cd4-9707-d8e3ab9b80fe)
 
 3️⃣ `03_Backup_and_Job_Scheduling.sql`  
 - Creates stored procedures for **Full & Differential backups**, plus automatic cleanup of old backup files (30 days full, 2 days diff).
